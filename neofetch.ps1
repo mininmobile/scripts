@@ -8,62 +8,6 @@ $tcase = 1
 $ftcase = 2
 $fccase = 1
 
-function Get-Computer {
-	return "$($env:UserName)@$($env:ComputerName)"
-}
-
-function Get-OS {
-	$architecture = (Get-WmiObject Win32_OperatingSystem).OSArchitecture.Split("-")[0] + " Bit"
-	$caption = (Get-WmiObject Win32_OperatingSystem).Caption
-
-	return "$($architecture) $($caption)"
-}
-
-function Get-Kernel {
-	return (Get-WmiObject Win32_OperatingSystem).Version;
-}
-
-function Get-Uptime {
-	$uptime = ((Get-WmiObject Win32_OperatingSystem).ConvertToDateTime(
-				(Get-WmiObject Win32_OperatingSystem).LocalDateTime) - 
-				(Get-WmiObject Win32_OperatingSystem).ConvertToDateTime(
-				(Get-WmiObject Win32_OperatingSystem).LastBootUpTime))
-
-	return $uptime.Days.ToString() + " days, " + $uptime.Hours.ToString() + " hours, " + $uptime.Minutes.ToString() + " minutes"
-}
-
-function Get-Packages {
-	$list = (choco list -l -r) | Out-String
-
-	return ([regex]::Matches($list, "\n")).count
-}
-
-function Get-Shell {
-	return "Powershell $($Host.Version)"
-}
-
-function Get-Resolution {
-	Add-Type -AssemblyName System.Windows.Forms
-	$res = [System.Windows.Forms.SystemInformation]::PrimaryMonitorSize
-
-	return "$($res.Width)x$($res.Height)"
-}
-
-function Get-CPU {
-	return (Get-WmiObject Win32_Processor).Name.Replace("\s+", " ")
-}
-
-function Get-GPU {
-	return (Get-WmiObject Win32_DisplayConfiguration).DeviceName
-}
-
-function Get-RAM {
-	$TotalRam = ([math]::Truncate((Get-WmiObject Win32_ComputerSystem).TotalPhysicalMemory / 1MB));
-	$UsedRam = $TotalRam - ([math]::Truncate((Get-WmiObject Win32_OperatingSystem).FreePhysicalMemory / 1KB));
-
-	return $UsedRam.ToString() + "MiB / " + $TotalRam.ToString() + "MiB"
-}
-
 function Set-Casing([string] $text, [int] $case) {
 	switch ($case) {
 		0 { return $text }
