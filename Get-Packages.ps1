@@ -1,3 +1,3 @@
 $list = (choco list -l -r) | Out-String
 
-([regex]::Matches($list, "\n")).count
+([regex]::Matches($list, "\n")).Count

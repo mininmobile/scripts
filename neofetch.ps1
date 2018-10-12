@@ -58,8 +58,8 @@ $data = @{
 	"Shell" =		(Get-Shell);
 	"Resolution" =	(Get-Resolution);
 	"WM" =			"DWM";
-	"CPU" =			(Get-CPU);
-	"GPU" =			(Get-GPU);
+	"CPU" =			(Get-Processor);
+	"GPU" =			(Get-GraphicsCard);
 	"Memory" =		(Get-RAM);
 }
 
