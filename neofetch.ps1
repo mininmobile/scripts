@@ -21,9 +21,9 @@ function Get-Colors {
 
 	Write-Host "" # new line
 	Write-Host "  " -n # padding
-	c 1; c 2; c 3; c 4; c 5; c 6; c 7; c 0
+	c 9; c 10; c 11; c 12; c 13; c 14; c 7;  c 15
 	Write-Host "`n  " -n # padding
-	c 9; c 10; c 11; c 12; c 13; c 14; c 15; c 8
+	c 1; c 2;  c 3;  c 4;  c 5;  c 6;  c 8;  c 0
 	Write-Host "" # new line
 }
 
