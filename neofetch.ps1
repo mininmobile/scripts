@@ -1,5 +1,5 @@
 $accent = [ConsoleColor]::Magenta
-$colons = $false
+$colon = "" # ":"
 # casing options
 #	0: ignore
 #	1: lower
@@ -96,8 +96,7 @@ function field([string] $name, [string] $content) {
 	$name = Set-Casing $name $ftcase
 	$content = Set-Casing $content $fccase
 
-	Write-Host $name -n -f $cacc
-	if ($colons) { Write-Host ":" -n -f $cacc }
+	Write-Host "$($name)$($colon)" -n -f $cacc
 	Write-Host " $($content)" -f $creg
 }
 

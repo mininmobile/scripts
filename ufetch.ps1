@@ -1,5 +1,5 @@
 $cacc = [ConsoleColor]::Magenta
-$colon = ""
+$colon = "" # ":"
 # casing options
 #	0: ignore
 #	1: lower
