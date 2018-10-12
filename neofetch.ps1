@@ -46,19 +46,18 @@ function Get-Colors {
 $art = @{
 	 0 = "                              ";
 	 1 = "                              ";
-	 2 = "                              ";
-	 3 = "               #  #  #  #     ";
+	 2 = "               #  #  #  #     ";
+	 3 = "     #  #  #   #  #  #  #     ";
 	 4 = "     #  #  #   #  #  #  #     ";
 	 5 = "     #  #  #   #  #  #  #     ";
 	 6 = "     #  #  #   #  #  #  #     ";
-	 7 = "     #  #  #   #  #  #  #     ";
-	 8 = "                              ";
+	 7 = "                              ";
+	 8 = "     #  #  #   #  #  #  #     ";
 	 9 = "     #  #  #   #  #  #  #     ";
 	10 = "     #  #  #   #  #  #  #     ";
 	11 = "     #  #  #   #  #  #  #     ";
-	12 = "     #  #  #   #  #  #  #     ";
-	13 = "               #  #  #  #     ";
-	14 = "                              ";
+	12 = "               #  #  #  #     ";
+	13 = "                              ";
 }
 
 $currentAsciiLine = 0
@@ -119,7 +118,7 @@ Write-Host "" # new line
 title (Get-Computer)
 ascii; field "OS"			$data["OS"]
 ascii; field "Kernel"		$data["Kernel"]
-ascii; field "Packages" $data["Packages"]
+ascii; field "Packages"		$data["Packages"]
 ascii; field "Uptime"		$data["Uptime"]
 ascii; field "Shell"		$data["Shell"]
 ascii; field "Resolution"	$data["Resolution"]
