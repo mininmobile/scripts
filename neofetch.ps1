@@ -8,6 +8,12 @@ $tcase = 1
 $ftcase = 2
 $fccase = 1
 
+function Prettify([string] $timestamp) {
+	$x = $timestamp.Split(":")
+
+	return "$($x[0]) hours, $($x[1]) minutes"
+}
+
 function Set-Casing([string] $text, [int] $case) {
 	switch ($case) {
 		0 { return $text }
@@ -54,7 +60,7 @@ Write-Host "Gathering system information..."
 $data = @{
 	"OS" =			(Get-OS);
 	"Kernel" =		(Get-Kernel);
-	"Uptime" =		(Get-Uptime)
+	"Uptime" =		(Prettify(Get-Uptime))
 	"Shell" =		(Get-Shell);
 	"Resolution" =	(Get-Resolution);
 	"WM" =			"DWM";
