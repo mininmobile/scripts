@@ -100,8 +100,6 @@ function field([string] $name, [string] $content) {
 	Write-Host " $($content)" -f $creg
 }
 
-Write-Host "Gathering system information..."
-
 $data = @{
 	"OS" =			(Get-OS);
 	"Kernel" =		(Get-Kernel);
@@ -117,7 +115,7 @@ $data = @{
 
 try { $data["Packages"] = (Get-Packages) } catch {}
 
-Clear-Host
+Write-Host "" # new line
 title (Get-Computer)
 ascii; field "OS"			$data["OS"]
 ascii; field "Kernel"		$data["Kernel"]
