@@ -1,4 +1,4 @@
-$accent = [ConsoleColor]::Magenta
+$accent = [ConsoleColor]::DarkRed
 $colon = "" # ":"
 # casing options
 #	0: ignore
@@ -63,7 +63,7 @@ $art = @{
 $currentAsciiLine = 0
 
 function ascii {
-	$cart = [ConsoleColor]::Blue
+	$cart = [ConsoleColor]::DarkCyan
 
 	$result = $art[$currentAsciiLine]
 
