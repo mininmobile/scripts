@@ -23,10 +23,10 @@ try { $packages = (Get-Packages) } catch { $packages = "chocolately not installe
 
 Write-Host "" # new line
 Write-Host "            " -n -f $cart; Write-Host (Set-Casing (Get-Computer) $tcase) -f $cacc;
-Write-Host " ###  ###   " -n -f $cart; Write-Host (Set-Casing "OS		$($colon)`t`t" $ftcase) -n -f $cacc;	Write-Host (Set-Casing (Get-OS) $fccase) -f $creg
+Write-Host " ###  ###   " -n -f $cart; Write-Host (Set-Casing "OS	$($colon)`t`t" $ftcase) -n -f $cacc;	Write-Host (Set-Casing (Get-OS) $fccase) -f $creg
 Write-Host " ###  ###   " -n -f $cart; Write-Host (Set-Casing "Kernel	$($colon)`t" $ftcase) -n -f $cacc;		Write-Host (Set-Casing (Get-Kernel) $fccase) -f $creg
 Write-Host "            " -n -f $cart; Write-Host (Set-Casing "Uptime	$($colon)`t" $ftcase) -n -f $cacc;		Write-Host (Set-Casing (Get-Uptime) $fccase) -f $creg
 Write-Host " ###  ###   " -n -f $cart; Write-Host (Set-Casing "Packages	$($colon)`t" $ftcase) -n -f $cacc;		Write-Host (Set-Casing $packages $fccase) -f $creg
 Write-Host " ###  ###   " -n -f $cart; Write-Host (Set-Casing "Shell	$($colon)`t" $ftcase) -n -f $cacc;		Write-Host (Set-Casing "powershell" $fccase) -f $creg
-Write-Host "            " -n -f $cart; Write-Host (Set-Casing "WM		$($colon)`t`t" $ftcase) -n -f $cacc;	Write-Host (Set-Casing "dwm" $fccase) -f $creg
+Write-Host "            " -n -f $cart; Write-Host (Set-Casing "WM	$($colon)`t`t" $ftcase) -n -f $cacc;	Write-Host (Set-Casing "dwm" $fccase) -f $creg
 Write-Host "" # new line
