@@ -1,2 +1,2 @@
-# scripts
-All of my Powershell scripts.
+# scripts-ps
+all of my Powershell scripts
